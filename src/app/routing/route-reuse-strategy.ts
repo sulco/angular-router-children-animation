@@ -1,5 +1,5 @@
 import { ActivatedRouteSnapshot, DetachedRouteHandle, RouteReuseStrategy } from '@angular/router';
-import { ItemComponent } from './item/item.component';
+import { ItemComponent } from '../item/item.component';
 
 export class CustomReuseStrategy implements RouteReuseStrategy {
 

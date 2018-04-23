@@ -8,6 +8,17 @@
   </div>
 </nav>
 
-<div [@routeSlide]="getState(outletRef)" class="container">
-  <router-outlet #outletRef="outlet"></router-outlet>
+<div [@routeSlide]="routeTrigger$ | async" class="container">
+  <nav class="float-right">
+    <a [routerLink]="prev$ | async" [class.disabled]="(itemChange$ | async) === 0"
+      class="btn btn-secondary btn-action btn-lg">
+      <i class="icon icon-back"></i>
+    </a>
+    <a [routerLink]="next$ | async" [class.disabled]="(itemChange$ | async) === items.length - 1"
+      class="btn btn-secondary btn-action btn-lg">
+      <i class="icon icon-forward"></i>
+    </a>
+  </nav>
+
+  <router-outlet></router-outlet>
 </div>
