@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <div class="navbar-section">
+    <a *ngFor="let item of items; index as i"
+      class="btn btn-link"
+      routerLinkActive="active"
+      [routerLink]="i"
+    >{{item.name}}</a>
+  </div>
+</nav>
+
+<div [@routeSlide]="getState(outletRef)" class="container">
+  <router-outlet #outletRef="outlet"></router-outlet>
+</div>

@@ -1,0 +1,15 @@
+@import "~spectre.css/src/_variables.scss";
+
+.active {
+  background: $secondary-color;
+}
+
+.container {
+  margin-top: 10px;
+  border: solid 3px $secondary-color;
+  border-radius: $border-radius;
+  padding: 20px;
+  overflow: hidden;
+  height: 200px;
+  position: relative;
+}
